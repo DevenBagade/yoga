@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga for MOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #F6CEFC;
+        }
+     .header-container {
+    background-color: #301934;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Add position relative */
+    z-index: 2; /* Add a higher z-index value */
+}
+        .search-box {
+            margin-top: 20px;
+        }
+        .search-box input[type="text"] {
+            padding: 10px 40px 10px 20px;
+            border-radius: 25px;
+            border: none;
+            width: 300px;
+            background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234F4F4F"><path d="M9 3C5.686 3 3 5.686 3 9s2.686 6 6 6c1.21 0 2.339-.36 3.291-.975l5.847 5.848c.39.39 1.024.39 1.414 0 .39-.39.39-1.023 0-1.414L13.29 12.29c.615-.952.974-2.082.974-3.291 0-3.314-2.686-6-6-6zm0 2c2.22 0 4 1.78 4 4s-1.78 4-4 4-4-1.78-4-4 1.78-4 4-4z"/></svg>') no-repeat;
+            background-position: 10px center;
+            background-size: 20px;
+        }
+        .search-box input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #F6CEFC;
+            color: #301934;
+            cursor: pointer;
+        }
+        .search-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .search-box input[type="text"]:hover {
+            background: #f4f4f4;
+        }
+
+        /* Additional text styling */
+        .additional-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .additional-text div {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            color: #ff7f50; /* Coral color */
+            margin-bottom: 10px;
+        }
+
+        .additional-text div:nth-child(2) {
+            color: #1e90ff; /* Dodger blue color */
+        }
+
+        .additional-text div:last-child {
+            color: #20b2aa; /* Light sea green color */
+        }
+
+        /* Result container styling */
+       .result-container {
+    background-color: #F6CEFC;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: none; /* Initially hidden */
+    position: relative; /* Add position relative */
+    z-index: 1; /* Add a lower z-index value */
+}
+
+        .result-container h2 {
+            color: #301934;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .result-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .result-container ul li a {
+            color: #301934;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .result-container ul li a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+        }
+        h2 {
+            color: #301934;
+        }
+        p {
+            line-height: 1.5;
+            width: 60%;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+ 
+img {
+  float: right;
+ 
+  margin: 0px 0px 15px 20px;
+ width : 25%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>YOGA FOR MOM</h1>
+        <form onsubmit="searchYoga(event)" class="search-box">
+            <input type="text" id="health-issue" placeholder="  Enter Health Issue / Yoga name">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Results container -->
+    <div id="results" class="result-container"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="yoga">
+    <div class="content">
+        <h2>Yoga for Moms</h2><img src="https://akm-img-a-in.tosshub.com/indiatoday/sunsetyoga-2_647_062115121022.jpg?size=690:388" alt="Yoga for Moms">
+        <p>Yoga offers numerous benefits for moms, helping them stay healthy and manage the demands of motherhood. Here are some reasons why moms should practice yoga:</p>
+        <ul>
+            <li><strong>Stress Relief:</strong> Yoga helps moms relax, reduce stress, and improve their mood.</li>
+            <li><strong>Strength and Flexibility:</strong> Yoga poses strengthen and stretch muscles, promoting overall strength and flexibility.</li>
+            <li><strong>Postpartum Recovery:</strong> Yoga can aid in postpartum recovery by strengthening the pelvic floor muscles and improving core stability.</li>
+            <li><strong>Emotional Well-being:</strong> Practicing yoga enhances emotional well-being and fosters a sense of inner peace and balance.</li>
+        </ul>
+    </div>
+  
+</section>
+
+<section id="diet">
+    <div class="content">
+        <h2>Healthy Diet for Moms</h2> <img src="https://assets-global.website-files.com/5ca5fe687e34be0992df1fbe/611bdef355c6b7d4f6e9b659_balanced-diet-concept-VX8E3ZW-min.jpg" alt="Healthy Diet for Moms">
+        <p>A nutritious diet is essential for moms to maintain energy levels, support their health, and meet the demands of motherhood. Here are some dietary suggestions tailored to moms:</p>
+        <ul>
+            <li><strong>Lean Protein:</strong> Include sources of lean protein such as poultry, fish, eggs, tofu, and legumes in your diet to support muscle repair and energy levels.</li>
+            <li><strong>Fruits and Vegetables:</strong> Aim to consume a variety of colorful fruits and vegetables daily to provide essential vitamins, minerals, and antioxidants.</li>
+            <li><strong>Whole Grains:</strong> Choose whole grains such as oats, quinoa, brown rice, and whole wheat bread to provide sustained energy and fiber for digestive health.</li>
+            <li><strong>Healthy Fats:</strong> Incorporate sources of healthy fats such as avocados, nuts, seeds, and olive oil to support brain health and hormone balance.</li>
+            <li><strong>Hydration:</strong> Stay hydrated by drinking plenty of water throughout the day, especially if you're breastfeeding. Aim for at least 8-10 glasses of water daily.</li>
+        </ul>
+    </div>
+    
+</section>
+
+<section id="hydration">
+    <div class="content">
+        <h2>Hydration for Moms</h2> <img src="https://drivefordti.com/wp-content/uploads/2019/06/driverHydrationBlog-02.png" alt="Hydration for Moms">
+        <p>Proper hydration is crucial for moms to maintain energy levels, support milk production if breastfeeding, and promote overall health. Here are some hydration tips for moms:</p>
+        <ul>
+            <li><strong>Drink Water Regularly:</strong> Aim to drink water throughout the day, keeping a water bottle handy to stay hydrated.</li>
+            <li><strong>Monitor Urine Color:</strong> Check the color of your urine; pale yellow or clear urine indicates adequate hydration, while dark yellow urine may indicate dehydration.</li>
+            <li><strong>Hydrating Foods:</strong> Consume hydrating foods such as fruits (e.g., watermelon, strawberries) and vegetables (e.g., cucumber, spinach) to increase fluid intake.</li>
+            <li><strong>Avoid Excessive Caffeine:</strong> Limit caffeinated beverages as they can have diuretic effects and contribute to dehydration.</li>
+            <li><strong>Post-Workout Hydration:</strong> Replenish fluids after exercise or physical activity, especially if breastfeeding, to prevent dehydration.</li>
+        </ul>
+    </div>
+    
+</section>
+
+<section id="water-consumption">
+    <div>
+        <h2>Recommended Water Consumption for Women</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvS3GsF7j3zYqL3HtRdYc-hAwM9zjyup1U4fqhB0JKw&s" alt="hydration">
+        <p>Water needs vary depending on factors such as age, weight, activity level, and overall health. Here's a general guideline for daily water intake for women:</p>
+        <ul>
+            <li><strong>18-30 years:</strong> Approximately 11 cups (2.7 liters) per day</li>
+            <li><strong>31-50 years:</strong> Approximately 9 cups (2.2 liters) per day</li>
+            <li><strong>51+ years:</strong> Approximately 8 cups (1.9 liters) per day</li>
+        </ul><div class="image-container">
+        
+        <p>These recommendations include water from all sources, including beverages and food. Pregnant and breastfeeding women may need additional fluids to support their increased hydration needs.</p>
+</div>
+
+
+
+    
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Mock database (replace with actual data and retrieval logic)
+        const yogaDatabase = {
+            "hamstring pain": ["Paschimottanasana", "Uttanasana"],
+            "high blood pressure": ["Paschimottanasana", "Balasana"],
+            "stress": ["Balasana", "Savasana", "Paschimottanasana"],
+            "anxiety": ["Paschimottanasana", "Balasana", "Savasana", "Tadasana", "Setu Bandhasana"],
+            "back pain": ["Balasana", "Savasana", "Bhujangasana"],
+            "thyroid": ["Ustrasana", "Urdhva Dhanurasana", "Boat pose", "Bhujangasana"],
+            "anemia": ["Pranayama", "Surya Namaskar", "Uttanasana", "Savasana"],
+            "appendicitis": ["Balasana", "Savasana"],
+            "pcod": ["Baddha Konasana"],
+            "asthma": ["Sukhasana", "Bhujangasana", "Kapalabhati Pranayama"],
+            "diabetes": ["Trikonasana", "Halasana", "Paschimottanasana"],
+            "nausea": [ "Matsyasana"],
+            "aches": ["Garudasana"],
+            "breast cancer": ["Gomukhasana", "Bhujangasana"]
+        };
+
+        // Corresponding links for yoga poses
+        const yogaLinks = {
+            "Paschimottanasana": "paschimottanasana.html",    
+            "Uttanasana": "uttanasana.html",
+            "Balasana": "balasana.html",
+            "Savasana": "savasana.html",
+            "Tadasana": "tadasana.html",
+            "Setu Bandhasana": "setu_bandhasana.html",
+            "Bhujangasana": "bhujangasana.html",
+            "Ustrasana": "ustrasana.html",
+            "Urdhva Dhanurasana": "urdhva_dhanurasana.html",
+            "Boat pose": "boat_pose.html",
+            "Pranayama": "pranayama.html",
+            "Surya Namaskar": "surya_namaskar.html",
+            "Baddha Konasana": "baddha_konasana.html",
+            
+            "Sukhasana": "sukhasana.html",
+            "Kapalabhati Pranayama": "kapalabhati_pranayama.html",
+            "Trikonasana": "trikonasana.html",
+            "Halasana": "halasana.html",
+            
+            "Matsyasana": "matsyasana.html",
+            "Garudasana": "garudasana.html",
+            
+          
+            "Gomukhasana": "gomukhasana.html"
+        };
+
+        // Function to perform search
+        function searchYoga(event) {
+            event.preventDefault(); // Prevent form submission
+            const healthIssue = document.getElementById("health-issue").value;
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = ""; // Clear previous results
+
+            if (yogaLinks.hasOwnProperty(healthIssue)) {
+                window.location.href = yogaLinks[healthIssue];
+            } else if (yogaDatabase.hasOwnProperty(healthIssue)) {
+                const yogaList = yogaDatabase[healthIssue];
+                const heading = document.createElement("h2");
+                heading.textContent = "Yoga Poses for " + healthIssue;
+                resultsContainer.appendChild(heading);
+
+                const ul = document.createElement("ul");
+                yogaList.forEach(yoga => {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.textContent = yoga;
+                    a.href = yogaLinks[yoga] ? yogaLinks[yoga] : "#"; // Check if link exists
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+                resultsContainer.appendChild(ul);
+                
+                // Make the result container visible
+                resultsContainer.style.display = "block";
+            } else {
+                resultsContainer.textContent = "No yoga poses found for " + healthIssue;
+            }
+        }
+    </script>
+</body>
+</html>

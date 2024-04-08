@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga for MOM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #F6CEFC;
+        }
+        .header-container {
+            background-color: #301934;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .search-box {
+            margin-top: 20px;
+        }
+        .search-box input[type="text"] {
+            padding: 10px 40px 10px 20px;
+            border-radius: 25px;
+            border: none;
+            width: 300px;
+            background: #fff url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234F4F4F"><path d="M9 3C5.686 3 3 5.686 3 9s2.686 6 6 6c1.21 0 2.339-.36 3.291-.975l5.847 5.848c.39.39 1.024.39 1.414 0 .39-.39.39-1.023 0-1.414L13.29 12.29c.615-.952.974-2.082.974-3.291 0-3.314-2.686-6-6-6zm0 2c2.22 0 4 1.78 4 4s-1.78 4-4 4-4-1.78-4-4 1.78-4 4-4z"/></svg>') no-repeat;
+            background-position: 10px center;
+            background-size: 20px;
+        }
+        .search-box input[type="submit"] {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            background-color: #F6CEFC;
+            color: #301934;
+            cursor: pointer;
+        }
+        .search-box input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .search-box input[type="text"]:hover {
+            background: #f4f4f4;
+        }
+
+        /* Additional text styling */
+        .additional-text {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .additional-text div {
+            font-size: 24px;
+            font-weight: 700;
+            font-family: 'Roboto', sans-serif;
+            color: #ff7f50; /* Coral color */
+            margin-bottom: 10px;
+        }
+
+        .additional-text div:nth-child(2) {
+            color: #1e90ff; /* Dodger blue color */
+        }
+
+        .additional-text div:last-child {
+            color: #20b2aa; /* Light sea green color */
+        }
+
+        /* Result container styling */
+        .result-container {
+            background-color: #F6CEFC;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            display: none; /* Initially hidden */
+        }
+
+        .result-container h2 {
+            color: #301934;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .result-container ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-container ul li {
+            margin-bottom: 10px;
+        }
+
+        .result-container ul li a {
+            color: #301934;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .result-container ul li a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>YOGA FOR MOM</h1>
+        <form onsubmit="searchYoga(event)" class="search-box">
+            <input type="text" id="health-issue" placeholder="Enter Your Health Issue">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Results container -->
+    <div id="results" class="result-container"></div>
+
+    <script>
+        // Mock database (replace with actual data and retrieval logic)
+        const yogaDatabase = {
+            "hamstring pain": ["Paschimottanasana", "Uttanasana"],
+            "high blood pressure": ["Paschimottanasana", "Balasana"],
+            "stress": ["Balasana", "Savasana", "Paschimottanasana"],
+            "anxiety": ["Paschimottanasana", "Balasana", "Savasana", "Tadasana", "Setu Bandhasana"],
+            "back pain": ["Balasana", "Savasana", "Bhujangasana"],
+            "thyroid": ["Ustrasana", "Urdhva Dhanurasana", "Boat pose", "Bhujangasana"],
+            "anemia": ["Pranayama", "Surya Namaskar", "Uttanasana", "Savasana"],
+            "appendicitis": ["Balasana", "Savasana"],
+            "pcod": ["Baddha Konasana"],
+            "asthma": ["Sukhasana", "Bhujangasana", "Kapalabhati Pranayama"],
+            "diabetes": ["Trikonasana", "Halasana", "Paschimottanasana"],
+            "nausea": [ "Matsyasana"],
+            "aches": ["Garudasana"],
+            "breast cancer": ["Gomukhasana", "Bhujangasana"]
+        };
+
+        // Corresponding links for yoga poses
+        const yogaLinks = {
+            "Paschimottanasana": "paschimottanasana.html",    
+            "Uttanasana": "uttanasana.html",
+            "Balasana": "balasana.html",
+            "Savasana": "savasana.html",
+            "Tadasana": "tadasana.html",
+            "Setu Bandhasana": "setu_bandhasana.html",
+            "Bhujangasana": "bhujangasana.html",
+            "Ustrasana": "ustrasana.html",
+            "Urdhva Dhanurasana": "urdhva_dhanurasana.html",
+            "Boat pose": "boat_pose.html",
+            "Pranayama": "pranayama.html",
+            "Surya Namaskar": "surya_namaskar.html",
+            "Baddha Konasana": "baddha_konasana.html",
+            
+            "Sukhasana": "sukhasana.html",
+            "Kapalabhati Pranayama": "kapalabhati_pranayama.html",
+            "Trikonasana": "trikonasana.html",
+            "Halasana": "halasana.html",
+            
+            "Matsyasana": "matsyasana.html",
+            "Garudasana": "garudasana.html",
+            
+          
+            "Gomukhasana": "gomukhasana.html"
+        };
+
+        // Function to perform search
+        function searchYoga(event) {
+            event.preventDefault(); // Prevent form submission
+            const healthIssue = document.getElementById("health-issue").value;
+            const resultsContainer = document.getElementById("results");
+            resultsContainer.innerHTML = ""; // Clear previous results
+
+            if (yogaLinks.hasOwnProperty(healthIssue)) {
+                window.location.href = yogaLinks[healthIssue];
+            } else if (yogaDatabase.hasOwnProperty(healthIssue)) {
+                const yogaList = yogaDatabase[healthIssue];
+                const heading = document.createElement("h2");
+                heading.textContent = "Yoga Poses for " + healthIssue;
+                resultsContainer.appendChild(heading);
+
+                const ul = document.createElement("ul");
+                yogaList.forEach(yoga => {
+                    const li = document.createElement("li");
+                    const a = document.createElement("a");
+                    a.textContent = yoga;
+                    a.href = yogaLinks[yoga] ? yogaLinks[yoga] : "#"; // Check if link exists
+                    li.appendChild(a);
+                    ul.appendChild(li);
+                });
+                resultsContainer.appendChild(ul);
+                
+                // Make the result container visible
+                resultsContainer.style.display = "block";
+            } else {
+                resultsContainer.textContent = "No yoga poses found for " + healthIssue;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Web Page</title>
+    <style>
+        body {
+            background-color: #F6CEFC; /* Updated background color */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+           
+          background-color: #301934;
+            color: #fff;
+            padding: 20px;
+         
+        }
+        .black-box {
+            background-color: #301934; /* Updated heading background color */
+            color: white;
+            padding: 20px;
+            border-radius: 0 0 8px 8px; /* Rounded corners only at the bottom */
+            width: 100%; /* Cover entire horizontal width */
+        }
+        .back-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        h1 {
+            margin: 0;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="black-box">
+            <h1>Savasana</h1>
+            <button class="back-button" onclick="goBack()">Back</button>
+        </div>
+</div>
+ <div>
+            <img src="data:image/png;base64,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" alt="Savasana">
+            
+
+
+        </div>
+        <p>
+<br>
+Description:
+<br>Savasana, also known as Corpse Pose, is a foundational yoga posture often practiced at the end of a yoga session. Despite its seemingly simple appearance, Savasana is considered one of the most important and beneficial poses in yoga. It allows the body and mind to relax completely, promoting deep rest and rejuvenation.
+<br>
+Steps to Perform Savasana:
+<br>
+Starting Position: Lie down on your back on a yoga mat or any comfortable surface. Keep your legs extended and slightly apart, with your arms resting alongside your body, palms facing up.
+
+Head and Neck Alignment: Gently tuck your chin towards your chest to lengthen the back of your neck. Allow your head to rest evenly on the ground, ensuring there's no strain in the neck.
+
+Shoulder Relaxation: Roll your shoulders back and down, allowing them to settle comfortably on the mat. Feel the shoulder blades spreading wide across your back.
+
+Arm Position: Keep your arms relaxed with a slight bend at the elbows, allowing your hands to naturally curl in towards your body. Ensure there's no tension in the arms or hands.
+
+Hip and Leg Alignment: Let your legs relax completely, allowing them to fall open naturally. Release any tension in your hips and thighs, allowing them to sink into the ground.
+
+Foot Position: Allow your feet to flop open to the sides, with toes pointing outward. Let go of any tension in your feet and ankles.
+
+Breathing: Close your eyes gently and bring your awareness to your breath. Take slow, deep breaths, allowing your belly to rise on the inhale and fall on the exhale. Allow your breath to become smooth and natural.
+
+Relaxation: Release any remaining tension in your body with each exhale. Scan your body from head to toe, consciously relaxing each muscle group. Surrender completely to the pose, letting go of all effort and control.
+
+Stillness: Remain in Savasana for 5 to 15 minutes, or longer if desired. Try to remain as still and quiet as possible, allowing your body and mind to enter a state of deep relaxation.
+
+Exiting the Pose: When you're ready to come out of Savasana, begin to deepen your breath gradually. Gently wiggle your fingers and toes, then slowly roll onto your right side into a fetal position, using your arm as a pillow. Take a few breaths here before slowly sitting up.
+<br>
+Benefits of Savasana:
+<br>
+Stress Reduction: Savasana promotes relaxation and reduces stress by calming the nervous system and lowering levels of cortisol, the stress hormone.
+
+Deep Relaxation: This pose allows the body and mind to enter a state of deep relaxation, promoting physical, mental, and emotional well-being.
+
+Muscle Recovery: Savasana helps to release tension in the muscles, promoting faster recovery from physical exertion and reducing muscle soreness.
+
+Improved Sleep: Practicing Savasana regularly can improve sleep quality by inducing a state of relaxation and helping to alleviate insomnia and sleep disturbances.
+
+Mental Clarity: Savasana enhances mental clarity and focus by calming the mind and reducing mental chatter. It can help improve concentration and productivity in daily life.
+
+Emotional Healing: This pose provides an opportunity for emotional release and introspection, allowing practitioners to process and release pent-up emotions or stress.
+
+Lowered Blood Pressure: Savasana promotes relaxation of the cardiovascular system, helping to lower blood pressure and reduce the risk of heart disease and stroke.
+
+Enhanced Self-Awareness: Practicing Savasana cultivates self-awareness and mindfulness by encouraging practitioners to observe their thoughts, emotions, and bodily sensations without judgment.
+
+Integration: Savasana allows the body and mind to integrate the benefits of the yoga practice, leaving practitioners feeling refreshed, rejuvenated, and balanced.
+        </p>
+       
+    
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
